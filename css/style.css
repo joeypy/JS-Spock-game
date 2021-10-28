@@ -1,0 +1,322 @@
+/*============================== GOOGLE FONTS =================================*/
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+/*============================== VARIABLES CSS =================================*/
+/*============== Colors ===================*/
+/*============== Fonts and Typography ===================*/
+/*============================== BASE =================================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 0.938rem;
+  background-color: whitesmoke;
+  color: #4f5464;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+}
+body:after {
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.gamer {
+  position: relative;
+  margin-top: 150px;
+}
+.gamer .spock {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 50%;
+  top: -100px;
+  transform: translate(-50%, -50%);
+}
+.gamer__container {
+  width: 530px;
+  height: 600px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  background-image: url("../img/circuit-board.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: black 0px 15px 30px;
+}
+.gamer__header {
+  background: dodgerblue;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gamer__header h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+.gamer__player-container {
+  margin: 50px;
+}
+.gamer__player-container h2 {
+  margin-bottom: 1.2rem;
+}
+.gamer__player-container .player__choices {
+  display: flex;
+  justify-content: space-between;
+}
+.gamer__player-container .player__choices .far {
+  font-size: 3.5rem;
+}
+.gamer__player-container .player__choices .far:hover {
+  filter: brightness(120%);
+}
+.gamer #player .far,
+.gamer #player .player__choice {
+  color: dodgerblue;
+  cursor: pointer;
+}
+.gamer #computer .far,
+.gamer #computer .computer__choice {
+  color: #fa2930;
+  cursor: pointer;
+}
+.gamer .selected {
+  color: #000 !important;
+}
+.gamer .reset-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: 3.2rem;
+  transition: all 1s ease;
+}
+.gamer .reset-icon:hover {
+  transform: rotate(180deg);
+}
+.gamer__result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gamer__result-container h3 {
+  font-size: 2.2rem;
+  color: #000;
+  margin: unset;
+  margin-top: 1.3rem;
+}
+
+/*============================== LAYOUT =================================*/
+/* Row and columns systems */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*=col-] {
+  padding: 0 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* MEDIUM SCREEN */
+@media only screen and (max-width: 1280px) {
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+/* SMALL SCREEN */
+@media only screen and (max-width: 500px) {
+  .col-sm-1 {
+    width: 8.33%;
+  }
+
+  .col-sm-2 {
+    width: 16.66%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33%;
+  }
+
+  .col-sm-5 {
+    width: 41.66%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33%;
+  }
+
+  .col-sm-8 {
+    width: 66.66%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33%;
+  }
+
+  .col-sm-11 {
+    width: 91.66%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+/*============================== MEDIA QUERY =================================*/
+@media screen and (max-width: 376px) {
+  .gamer__container {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gamer__container {
+    margin: 0 auto;
+    width: 98%;
+    height: 450px;
+  }
+  .gamer__header h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .gamer__player-container {
+    margin: 25px;
+  }
+  .gamer__player-container h2 {
+    font-size: 1.3rem;
+  }
+  .gamer__player-container .player__choices {
+    justify-content: space-between;
+  }
+  .gamer__player-container .far {
+    margin-right: 5px;
+    font-size: 2.8rem !important;
+  }
+  .gamer__player-container .far:last-of-type {
+    margin-right: 0;
+  }
+  .gamer .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+  .gamer .result-text {
+    margin-top: -30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

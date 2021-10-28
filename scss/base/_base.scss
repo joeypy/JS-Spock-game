@@ -1,0 +1,130 @@
+/*============================== BASE =================================*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    background-color: $body-color;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+
+    &:after {
+        content: "";
+        position: absolute;
+        opacity: 0.6;
+        background-color: $over-screen;
+        width: 100%;
+        height: 100vh;
+        z-index: -2;
+    }
+}
+
+.gamer {
+    position: relative;
+    margin-top: 150px;
+    
+    .spock {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        left: 50%;
+        top: -100px;
+        transform: translate(-50%, -50%)
+    }
+    
+    &__container {
+        width: 530px;
+        height: 600px;
+        background-color: $main-bg;
+        border-radius: $border-radius;
+        background-image: url("../img/circuit-board.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: $box-shadow;
+    }
+    
+    &__header {
+        background: $main-color;
+        color: $txt-white;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        height: 100px;
+        display: flex;
+        justify-content: center;align-items: center;
+
+        h1 {
+            color: $txt-white;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__player-container {
+        margin: 50px;
+
+        h2 {
+            margin-bottom: 1.2rem;
+        }
+        .player__choices{
+            display: flex;
+            justify-content: space-between;
+            
+            .far {
+                font-size: 3.5rem;
+    
+                &:hover {
+                    filter: brightness(120%);
+                }
+            }
+        }
+    }
+
+    #player .far,
+    #player .player__choice {
+        color: $main-color;
+        cursor: pointer;
+    }
+
+    #computer .far,
+    #computer .computer__choice {
+        color: $main-color-red;
+        cursor: pointer;
+    }
+
+    .selected {
+        color: $txt-black !important;
+    }
+
+    .reset-icon {
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-left: 3.2rem;
+        transition: all 1s ease;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__result-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h3 {
+            font-size: 2.2rem;
+            color: $txt-black;
+            margin: unset;
+            margin-top: 1.3rem;
+        }
+    }
+    
+}

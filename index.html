@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=docplayer.net">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Gamer container -->
+    <section class="gamer">
+        <div class="gamer__container">
+            <!-- Header container -->
+            <header class="gamer__header">
+                <h1>Rock Paper Scissors Lizard Spock</h1>
+            </header>
+            <!-- Player Container -->
+            <div class="gamer__player-container" id="player">
+                <h2>You — <span id="playerScore">0</span><span class="player__choice" id="playerChoice"></span></h2>
+                <div class="player__choices">
+                    <i class="far fa-hand-rock" id="playerRock" title="Rock" onclick="select('rock')"></i>
+                    <i class="far fa-hand-paper" id="playerPaper" title="Paper" onclick="select('paper')"></i>
+                    <i class="far fa-hand-scissors" id="playerScissors" title="Scissors" onclick="select('scissors')"></i>
+                    <i class="far fa-hand-lizard" id="playerLizard" title="Lizard" onclick="select('lizard')"></i>
+                    <i class="far fa-hand-spock" id="playerSpock" title="Spock" onclick="select('spock')"></i>
+                </div>
+            </div>
+            <!-- Computer Container -->
+            <div class="gamer__player-container" id="computer">
+                <h2>Computer — <span id="computerScore">0</span><span class="computer__choice" id="computerChoice"></span></h2>
+                <div class="player__choices">
+                    <i class="far fa-hand-rock" id="computerRock" title="Rock"></i>
+                    <i class="far fa-hand-paper" id="computerPaper" title="Paper"></i>
+                    <i class="far fa-hand-scissors" id="computerScissors" title="Scissors"></i>
+                    <i class="far fa-hand-lizard" id="computerLizard" title="Lizard"></i>
+                    <i class="far fa-hand-spock" id="computerSpock" title="Spock"></i>
+                </div>
+            </div>
+            <!-- Reset icon -->
+            <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
+            <!-- Results Text -->
+            <footer class="gamer__result-container">
+                <h3 class="result-text" id="resultText">Let's play!</h3>
+            </footer>
+        </div>
+        <img class="spock" src="./img/images-removebg-preview.png" alt="">
+    </section>
+
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>
